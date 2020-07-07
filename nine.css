@@ -1,0 +1,70 @@
+.wrapper {
+  width: 80vw;
+  border-style: solid;
+  border-color: sienna;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.container {
+  flex: 1;
+  position: relative;
+  border-style: solid;
+  height: 400px;
+  width: 300px;
+  color: black;
+  background-color: aqua;
+  text-transform: uppercase;
+  animation-name: move;
+  animation-duration: 5s;
+}
+
+span {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container1 {
+  flex: 1;
+  background-color: orange;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  animation-name: dance;
+  animation-duration: 5s;
+}
+@keyframes move {
+  from {
+    background-color: brown;
+  }
+
+  to {
+    background-color: coral;
+  }
+}
+
+@keyframes dance {
+  0% {
+    opacity: 1;
+    background-color: blue;
+    transform: translatex(-800px);
+  }
+
+  100% {
+    opacity: 1;
+    color: blue;
+    transform: translatex(50px);
+  }
+}
